@@ -1,2 +1,7 @@
 <h1>Flashcards</h1>
 <p> list of categories goes hurr.</p>
+<ul>
+  <% Deck.all.each do |deck| %>
+    <li><%= deck.theme %></li>
+  <% end %>
+</ul>
