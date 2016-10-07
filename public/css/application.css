@@ -1,0 +1,10 @@
+body {
+  margin: 50px;
+  background-image: url('https://static.pexels.com/photos/48126/books-education-school-literature-48126.jpeg');
+  background-size: 100%;
+  font-family: helvetica;
+}
+
+a:hover {
+  color: red;
+}

@@ -15,16 +15,14 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title></title>
+  <title>Flashcards</title>
 </head>
 <body>
-  <a href="/users/new"> Register </a> <a href="/users/login"> Log In </a>
-  <form action="/users/logout" method="post">
-    <input type="submit" value="Log Out">
-  </form>
-  <%= yield %>
-  <%if session[:active_user] %>
-    <p> You are currently logged in <3 </p>
+<%if !user_logged_in?%>
+    <a href="/users/new"> Register</a>  |  <a href="/users/login"> Log In</a>
+<%else%>
+  <p>  Currently logged in as <%=current_user.name%> <3 <a href="/users/logout"> Log Out </a></p>
   <%end%>
+  <%= yield %>
 </body>
 </html>

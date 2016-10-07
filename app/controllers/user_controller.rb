@@ -23,7 +23,7 @@ post '/users/login' do
   end
 end
 
-post '/users/logout' do
+get '/users/logout' do
   session.destroy
   redirect '/'
 end
